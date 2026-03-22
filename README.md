@@ -1,4 +1,4 @@
-# 🇪🇬 EGX-Nexus (Egyptian Exchange Nexus)
+# EGX-Nexus (Egyptian Exchange Nexus)
 
 <p align="center">
   <b>A fully autonomous AI-powered trading intelligence platform tailored for the Egyptian Stock Exchange (EGX).</b><br>
