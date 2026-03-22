@@ -1,0 +1,1286 @@
+{
+  "cd3cc595-e6d0-4995-84fa-c4ae0e307308": {
+    "symbol": "AAF",
+    "name": "Afaaq Fund"
+  },
+  "cc3ff838-2664-4e55-ac7e-7fbd1ab687b7": {
+    "symbol": "AALR",
+    "name": "General Company for Land Reclamation, Development and Reconstruction"
+  },
+  "6636cf5b-75a1-4b5b-9185-5de21538327e": {
+    "symbol": "ABR",
+    "name": "Bareeq Fund"
+  },
+  "c60af35d-d1d8-4582-9837-63302ba921fb": {
+    "symbol": "ABUK",
+    "name": "Abu Qir Fertilizers and Chemicals"
+  },
+  "ab4d9c02-bc69-4c14-bffd-6b1d74c47618": {
+    "symbol": "ACAMD",
+    "name": "Arab Company for Asset Management & Development"
+  },
+  "aae40e4c-3e6d-4036-b3fe-eab4076e2c82": {
+    "symbol": "ACAP",
+    "name": "A Capital"
+  },
+  "1067be04-9d8f-44b2-83c3-b5c0b6537905": {
+    "symbol": "ACGC",
+    "name": "Arab Cotton Ginning"
+  },
+  "59a91a22-2d81-4678-826e-cb7f96277ee1": {
+    "symbol": "ACRO",
+    "name": "Acrow Misr"
+  },
+  "af0f60d8-56b3-4881-ac38-db4e5cee2846": {
+    "symbol": "ACTF",
+    "name": "ACT Financial"
+  },
+  "14dd4653-eeb1-4bbe-934d-8fb18800fb82": {
+    "symbol": "ADA",
+    "name": "Al Ahly Dahab Fund"
+  },
+  "fed81d4b-43b6-4900-8f17-3b1f8bf07807": {
+    "symbol": "ADCI",
+    "name": "Arab Pharmaceuticals"
+  },
+  "50362d04-f235-4315-87b9-9f762add5021": {
+    "symbol": "ADIB",
+    "name": "Abu Dhabi Islamic Bank - Egypt"
+  },
+  "d2ea44d0-2335-48d8-89ea-117aa9b74b2d": {
+    "symbol": "ADIB_r3",
+    "name": "Rights Issue of Abu Dhabi Islamic Bank - Egypt"
+  },
+  "a5ee718f-d822-4837-85e4-54d11869598e": {
+    "symbol": "ADM",
+    "name": "Diamond fund"
+  },
+  "057b763f-1695-42b6-af0d-f946bf125880": {
+    "symbol": "ADPC",
+    "name": "The Arab Dairy Products Company (Panda)"
+  },
+  "5ddb3f45-346b-48b0-8146-fa7405ffff17": {
+    "symbol": "ADRI",
+    "name": "Arab Development & Real Estate Investment"
+  },
+  "4e5f69c6-14cd-42dd-8892-a37d4f704da8": {
+    "symbol": "AEF",
+    "name": "El Fanar Fund"
+  },
+  "cd861cc3-a795-4938-a6fb-a8b3c24e5131": {
+    "symbol": "AFDI",
+    "name": "Al Ahly for Development & Investment"
+  },
+  "447701c4-7e28-4100-8f0e-fb5225e26eb6": {
+    "symbol": "AFMC",
+    "name": "Alexandria Flour Mills"
+  },
+  "4a8ef0f6-000d-4ee2-ab7c-28f173157be4": {
+    "symbol": "AGO",
+    "name": "Gosoor Fund"
+  },
+  "6f19cfbe-b97d-4a87-8528-73e896e5826f": {
+    "symbol": "AIDC",
+    "name": "Arabia for Investment and Development"
+  },
+  "1fbfb503-16c3-4023-9981-20d2d2125b6b": {
+    "symbol": "AIFI",
+    "name": "Atlas for Investment & Food Industries"
+  },
+  "0bfff7f7-bb44-474b-a6ae-ec7f15bdb342": {
+    "symbol": "AIFI_r1",
+    "name": "Rights Issue of Atlas for Investment & Food Industries"
+  },
+  "4af0cc04-fbfa-4851-bac8-5df9ac3026a9": {
+    "symbol": "AIHC",
+    "name": "Arabia Investments Holding"
+  },
+  "ee2aa3dc-24a5-41d0-b3a4-1d770a4c7a65": {
+    "symbol": "AIS",
+    "name": "Istsmar w Aman Fund"
+  },
+  "6d044588-6c73-4d9c-a9d1-3a49404fd2f6": {
+    "symbol": "AJWA",
+    "name": "AJWA for Food Industries Company"
+  },
+  "393b5551-42de-44a0-8f7e-de35fbe7a5de": {
+    "symbol": "ALCN",
+    "name": "Alexandria Container & Cargo Handling Company"
+  },
+  "637b3277-bc5b-4d62-8309-8385dbe7886a": {
+    "symbol": "ALEX",
+    "name": "Alexandria Portland Cement"
+  },
+  "41005c31-6f82-4524-953a-0318cc8ebcfe": {
+    "symbol": "ALUM",
+    "name": "Arab Aluminum"
+  },
+  "9ccfc672-16a7-49c1-b9fc-781165fe9255": {
+    "symbol": "ALV",
+    "name": "AZ _LV Fund"
+  },
+  "a0da702c-a24d-400c-b21f-9800c6e9a901": {
+    "symbol": "AMER",
+    "name": "Amer Group"
+  },
+  "d14e37b0-979e-44db-af0f-929808cdb8ca": {
+    "symbol": "AMES",
+    "name": "Alexandria New Medical Center"
+  },
+  "4560723f-ec22-4065-8bcf-8dda818ba284": {
+    "symbol": "AMIA",
+    "name": "Arab Moltaqa Investments"
+  },
+  "44b25697-8a1c-49f4-b7df-68ac8e0e629f": {
+    "symbol": "AMOC",
+    "name": "Alexandria Mineral Oils Company"
+  },
+  "1845c949-6641-4a6a-bb94-b9f8d96887a1": {
+    "symbol": "AMPI",
+    "name": "Novida for Investment and Technology"
+  },
+  "fceabed2-2cca-40a4-9579-7635222c8e5c": {
+    "symbol": "ANFI",
+    "name": "Alexandria National Company for Financial Investment"
+  },
+  "718dc970-9bc5-44f4-88d0-27bcb6afb26c": {
+    "symbol": "APPC",
+    "name": "Advanced Pharmaceutical Packaging"
+  },
+  "0089f300-c4ac-4ff1-8ef9-9e3172eb28dd": {
+    "symbol": "APSW",
+    "name": "Arab Polvara Spinning & Weaving"
+  },
+  "beb281e5-763a-4aa5-beff-6509f4904c9a": {
+    "symbol": "ARAB",
+    "name": "ARAB Developers Holding"
+  },
+  "58338a21-6a90-482f-a6b0-0f7fb3ee8a6a": {
+    "symbol": "ARCC",
+    "name": "Arabian Cement Company"
+  },
+  "a95da2b7-6cc6-4973-8559-e37ece103bcd": {
+    "symbol": "AREH",
+    "name": "Egyptian Real Estate Group"
+  },
+  "1a12b9d2-450b-48b9-8702-c4531e698cbe": {
+    "symbol": "ARVA",
+    "name": "Arab Valves Company"
+  },
+  "81348a65-0d7a-457b-acc2-eecf7342dc9d": {
+    "symbol": "ASCM",
+    "name": "Asec Company for Mining (ASCOM)"
+  },
+  "4fc88c01-1eb1-438d-ab01-2602354018fa": {
+    "symbol": "ASO",
+    "name": "AZ Opportunities Fund Sharia"
+  },
+  "ebf01fc5-c492-42df-bfa1-d9a7c8e1b0b4": {
+    "symbol": "ASPI",
+    "name": "Aspire Capital Holding for Financial Investment"
+  },
+  "54217032-2e59-4c2d-889a-fcb61281ff43": {
+    "symbol": "ATD",
+    "name": "Al Ahly Tamayoz Dividends Fund"
+  },
+  "531137e1-e60d-4b0d-8ef5-9f1b49c4837d": {
+    "symbol": "ATLC",
+    "name": "Al Tawfeek Leasing Company"
+  },
+  "c83d268c-c9cb-458b-ac5b-c10c69b9ccf7": {
+    "symbol": "ATQA",
+    "name": "Misr National Steel - Ataqa"
+  },
+  "9687c967-7ac8-4ccf-a752-3fd91f14cf14": {
+    "symbol": "AXPH",
+    "name": "Alexandria Pharmaceuticals"
+  },
+  "e4078154-a4be-4c8a-8426-0749fa11a411": {
+    "symbol": "AZG",
+    "name": "Azimut Gold Fund"
+  },
+  "05767e50-6038-461c-a0e6-0804c0c32e1c": {
+    "symbol": "AZN",
+    "name": "AZ Nasser Fund"
+  },
+  "d382c6d8-dc8f-4536-8375-ee373b82da14": {
+    "symbol": "AZO",
+    "name": "AZ Opportunity fund"
+  },
+  "d78a48b5-ddc6-4759-828f-8761e0f5f391": {
+    "symbol": "AZS",
+    "name": "AZ Savings Fund"
+  },
+  "f0bb1aa1-5ace-4650-98e9-f0d3b7300dec": {
+    "symbol": "B35",
+    "name": "Beltone B35 fund"
+  },
+  "e207fe41-bbab-4787-9155-c653bc0af629": {
+    "symbol": "BAL",
+    "name": "B-Alpha Fund"
+  },
+  "465d71e1-49ad-4d79-8689-a3efe08fe2d5": {
+    "symbol": "BCO",
+    "name": "Beltone Consumers Sectorial Fund"
+  },
+  "26f26377-beb5-4819-a869-38a0018e6707": {
+    "symbol": "BFF",
+    "name": "Banque du Caire First Fund"
+  },
+  "5453986c-767d-4350-aa94-11c0e3babfa9": {
+    "symbol": "BFI",
+    "name": "Beltone Financial Sectorial Fund"
+  },
+  "fad8cc17-4e66-4376-8ca5-5edf29d4a931": {
+    "symbol": "BIDI",
+    "name": "El Badr Investment And Development BID"
+  },
+  "0fc85f09-cf68-498e-9a79-b2f5795c5d96": {
+    "symbol": "BIGP",
+    "name": "Barbary Investment Group"
+  },
+  "a5dad98b-6c3f-401b-b20b-4322f3d00fcb": {
+    "symbol": "BIN",
+    "name": "Beltone Industrial Sectorial Fund"
+  },
+  "753ac636-accb-40bd-99b3-7dabc6d34c63": {
+    "symbol": "BINV",
+    "name": "B Investments Holding"
+  },
+  "62512b9c-6bd3-4d0f-bdbb-52ae6e7f2859": {
+    "symbol": "BIOC",
+    "name": "Glaxo Smith Kline"
+  },
+  "a52f5bdc-def5-495e-9cbe-fba2e8411fac": {
+    "symbol": "BMM",
+    "name": "Beltone Meya Meya Fund"
+  },
+  "0afe3623-c9f4-49e4-bdbd-ff04bdb1b912": {
+    "symbol": "BONY",
+    "name": "Bonyan for Development and Trade"
+  },
+  "c0ab97aa-fb68-4fb4-b361-5e857879e6a4": {
+    "symbol": "BRE",
+    "name": "Beltone RealEstate Sectorial Fund"
+  },
+  "79fe848d-b878-48c9-8019-c65a2061f12d": {
+    "symbol": "BSB",
+    "name": "Beltone Sabayek Fund"
+  },
+  "55969dc4-8bad-48f3-b7bb-6f571acb3fbc": {
+    "symbol": "BSC",
+    "name": "B-Secure Fund"
+  },
+  "7161ed35-d8ff-4fd8-b1d8-ddd0ade6e128": {
+    "symbol": "BTFH",
+    "name": "Beltone Financial"
+  },
+  "1be6d732-9300-406b-8234-7a4ca59a919c": {
+    "symbol": "BWA",
+    "name": "Beltone Wafra Fund"
+  },
+  "d0d23f8d-4749-4de9-96b4-5ce4a2f232fc": {
+    "symbol": "CAED",
+    "name": "Cairo Educational Services"
+  },
+  "d3f014e4-cd7b-4aa4-98e4-4be8686ab2ca": {
+    "symbol": "CANA",
+    "name": "Suez Canal Bank"
+  },
+  "0a126a0d-045d-4d10-a18b-6d9f4d833a4c": {
+    "symbol": "CASE~TAMAYUZ",
+    "name": "TAMAYUZ"
+  },
+  "a01d3e4c-6955-4b6c-888f-4e7373d5dce2": {
+    "symbol": "CCAP",
+    "name": "Citadel Capital"
+  },
+  "bd94fb17-b3f9-4eb6-9755-1556892ea72f": {
+    "symbol": "CCB",
+    "name": "CI Consumer & Basic Needs Sectorial Fund"
+  },
+  "85ed564e-eb26-4a6f-8721-a7623e8a0e04": {
+    "symbol": "CCM",
+    "name": "CC Momentum Fund"
+  },
+  "fd00369d-d0ea-4944-a445-b9913efdf09d": {
+    "symbol": "CCRS",
+    "name": "Gulf Canadian Real Estate Investment Co."
+  },
+  "100e1718-d608-4864-b3bf-6290ce6571d1": {
+    "symbol": "CCRS_r1",
+    "name": "Rights Issue of Gulf Canadian Real Estate Investment Co."
+  },
+  "9b00e7c3-404f-4604-a5eb-199e014da65e": {
+    "symbol": "CEFM",
+    "name": "Middle Egypt Flour Mills"
+  },
+  "caf76d00-91b4-4b74-b79f-b3c5a1dbac97": {
+    "symbol": "CERA",
+    "name": "The Arab Ceramic Company - Ceramica Remas"
+  },
+  "826b5ec5-c5d8-4c2d-abee-c6e3c714dfcd": {
+    "symbol": "CEX",
+    "name": "CI Exporters Sectorial Fund"
+  },
+  "548131d2-0cea-4d55-99a8-195675cf0266": {
+    "symbol": "CFF",
+    "name": "CI Financial & Fintech Sectorial Fund"
+  },
+  "d54accc1-f450-47cd-9ba7-fa97794759fd": {
+    "symbol": "CFGH",
+    "name": "Concrete Fashion Group For Commercial & Industrial Investment"
+  },
+  "76753375-302a-4456-ba5f-62a748d0f3f1": {
+    "symbol": "CI30",
+    "name": "Misr Equity Fund"
+  },
+  "ccb39e91-0810-443a-8cf3-0964b9b25ca2": {
+    "symbol": "CICH",
+    "name": "CI Capital Holding"
+  },
+  "11ede47a-e76a-4ea0-9e68-ebe393943dcf": {
+    "symbol": "CIEB",
+    "name": "Credit Agricole Egypt"
+  },
+  "0c3a71ff-04eb-450f-8245-95d3af091379": {
+    "symbol": "CIRA",
+    "name": "Cairo for Investing & Development - Cira for Education"
+  },
+  "3d043604-016a-4ba2-8615-d2906e43e73b": {
+    "symbol": "CLHO",
+    "name": "Cleopatra Hospital Company"
+  },
+  "2f15faff-289e-42e1-bb17-301cc80f6258": {
+    "symbol": "CMS",
+    "name": "Misr Sharia Equity Fund"
+  },
+  "d7c676de-d1d0-4160-bd84-563f1b0e20ef": {
+    "symbol": "CNFN",
+    "name": "Contact Financial Holding"
+  },
+  "1923d036-45ad-480b-8c6b-1d1296862f6e": {
+    "symbol": "COMI",
+    "name": "Commercial International Bank"
+  },
+  "f4b5f39e-6bce-40e3-aae7-3fbf72410910": {
+    "symbol": "COPR",
+    "name": "Copper For Commercial Investment & Real Estate Development"
+  },
+  "61334d07-9027-4f1a-8dbd-c0cbab7beefd": {
+    "symbol": "COPR_r2",
+    "name": "Rights Issue of Copper For Commercial Investment & Real Estate Development"
+  },
+  "22355728-feb3-4cb8-8eab-40f38063bbd1": {
+    "symbol": "COSG",
+    "name": "Cairo Oils & Soap"
+  },
+  "45a62657-372a-4610-970b-8b202f6d6596": {
+    "symbol": "CPCI",
+    "name": "Cairo Pharmaceuticals"
+  },
+  "086ea7d7-a012-4cbd-bc39-7afcc8d0d9d2": {
+    "symbol": "CPME",
+    "name": "Catalyst Partners"
+  },
+  "d5cbd2ba-3ec4-4656-8b88-347b064a9be0": {
+    "symbol": "CRE",
+    "name": "CI Real Estate Sectorial Fund"
+  },
+  "7042a3a2-cb2e-4143-8213-e2b3b63cf404": {
+    "symbol": "CRST",
+    "name": "Crestmark Contracting and Real Estate Development"
+  },
+  "88f5fee0-3224-49f3-8e63-74be42b40b14": {
+    "symbol": "CSAG",
+    "name": "Canal Shipping Agencies"
+  },
+  "16088e16-c467-4ac5-8117-f17ca0243ba0": {
+    "symbol": "CTI",
+    "name": "CI Telecoms & IT Sectorial Fund"
+  },
+  "96e3365b-038a-4469-8443-0b30d516387d": {
+    "symbol": "DAPH",
+    "name": "Development & Engineering Consultants"
+  },
+  "92d2ff53-191d-41aa-ae1c-9499e07b74b9": {
+    "symbol": "DCRC",
+    "name": "Delta Construction & Rebuilding"
+  },
+  "cba89020-a826-4eb9-8fd2-03c4f38a4896": {
+    "symbol": "DEIN",
+    "name": "Delta Insurance"
+  },
+  "491d27f9-b691-44c1-b8ee-aab4264abff6": {
+    "symbol": "DGTZ",
+    "name": "Digitize for Investment And Technology"
+  },
+  "2fadb0cf-0aef-4dc0-8bd8-571c84b428ff": {
+    "symbol": "DIFC",
+    "name": "International Dry Ice Company - Difco 2"
+  },
+  "78d14ce4-8f78-43be-aaf3-1e44cef061d5": {
+    "symbol": "DOMT",
+    "name": "Arabian Food Industries (DOMTY)"
+  },
+  "d06fd029-67c7-4557-8c13-30b734251da4": {
+    "symbol": "DSCW",
+    "name": "Dice Sport & Casual Wear"
+  },
+  "a449f552-3b2f-4113-ad88-4b6d8ae8007f": {
+    "symbol": "DTPP",
+    "name": "Delta for Printing & Packaging"
+  },
+  "a73cd62f-70c6-400d-aaca-c55df17f0fc4": {
+    "symbol": "EALR",
+    "name": "El Arabia for Land Reclamation"
+  },
+  "9e621385-2c33-4eda-8121-691f9c30fc88": {
+    "symbol": "EASB",
+    "name": "Egyptian Arabian Themar Securities Brokerage"
+  },
+  "7717475d-fdb0-4bc6-b50b-efa6ab4cc175": {
+    "symbol": "EAST",
+    "name": "Eastern Company"
+  },
+  "291a32c4-e6c2-43b8-bc4b-36ae18d87fcf": {
+    "symbol": "EBSC",
+    "name": "Osool ESB Securities Brokerage"
+  },
+  "cf2d65af-12e1-468d-a946-8e85c666893b": {
+    "symbol": "ECAP",
+    "name": "El Ezz Porcelain (GEMMA)"
+  },
+  "2c95e04b-4311-49a4-b0cd-300b9a8d49f9": {
+    "symbol": "EDFM",
+    "name": "East Delta Flour Mills"
+  },
+  "0d5120a1-1e4f-4dcf-8c77-a0da5d9a2eeb": {
+    "symbol": "EEII",
+    "name": "El Arabia Engineering Industries"
+  },
+  "6561fc4a-3cd1-4be5-bdd0-6906c9adbee8": {
+    "symbol": "EFIC",
+    "name": "Egyptian Financial & Industrial"
+  },
+  "430d3966-703e-4839-acb7-027bdcd37a0c": {
+    "symbol": "EFID",
+    "name": "Edita Food Industries"
+  },
+  "3ac7617f-7cce-4fe7-944c-cf465f5ebe84": {
+    "symbol": "EFIH",
+    "name": "E-Finance For Digital and Financial Investements"
+  },
+  "905e85ac-c73c-4c8d-a945-d3004a02932b": {
+    "symbol": "EGAL",
+    "name": "Egypt Aluminum"
+  },
+  "816d6553-8500-4217-b30d-2002dc57a7b0": {
+    "symbol": "EGAS",
+    "name": "Natural Gas & Mining Project (Egypt Gas)"
+  },
+  "213c5b92-eceb-4b4e-aa31-dce35399a5b2": {
+    "symbol": "EGBE",
+    "name": "Egyptian Gulf Bank"
+  },
+  "98f4fcdf-7d19-4a4b-8519-9d99dbb4be5b": {
+    "symbol": "EGCH",
+    "name": "Egyptian Chemical Industries (KIMA)"
+  },
+  "33633457-d544-403a-960d-a7acaaae74c1": {
+    "symbol": "EGGOLD",
+    "name": "24k Gold"
+  },
+  "82b358db-3f28-4945-9f10-e288b72fa1ac": {
+    "symbol": "EGREF",
+    "name": "Egyptians Real Estate Fund Certificates"
+  },
+  "559e574f-cbb9-4ac4-ae0f-27cde61a881f": {
+    "symbol": "EGSA",
+    "name": "Egyptian Satellites (NILESAT)"
+  },
+  "5ddcc998-fefa-4854-a405-c4698197e4fa": {
+    "symbol": "EGTS",
+    "name": "Egyptian for Tourism Resorts"
+  },
+  "f4964041-0028-478c-be8b-4b3091d4dcbb": {
+    "symbol": "EGX100 EWI",
+    "name": "EGX100 EWI"
+  },
+  "0cee7645-4b4e-4d9f-9487-ceb03481c649": {
+    "symbol": "EGX30",
+    "name": "EGX30"
+  },
+  "b03a1a10-6922-45fa-bb0e-500966bd858f": {
+    "symbol": "EGX30CAPPED",
+    "name": "EGX30 Capped"
+  },
+  "5f53e6d6-5f1e-44de-8694-c9291e954545": {
+    "symbol": "EGX30ETF",
+    "name": "EGX30 ETF"
+  },
+  "f2ac55f7-1eff-409a-8d4d-d5f4d6ec196c": {
+    "symbol": "EGX35-LV",
+    "name": "EGX35-LV"
+  },
+  "69572d33-2703-48d5-8b64-abb43deb1674": {
+    "symbol": "EGX70 EWI",
+    "name": "EGX70"
+  },
+  "3d09d809-50ab-4539-bc34-7ef2a273e201": {
+    "symbol": "EHDR",
+    "name": "Egyptians Housing Development & Reconstruction"
+  },
+  "bb7c78ad-5e8e-4df6-a91f-bac5c413f044": {
+    "symbol": "EITP",
+    "name": "Egyptian International Tourism Projects"
+  },
+  "cc10f876-affb-4d68-8349-2cf62312062d": {
+    "symbol": "ELEC",
+    "name": "Electro Cable Egypt"
+  },
+  "44c7cb66-291c-45ce-9985-ee2d3bbde091": {
+    "symbol": "ELKA",
+    "name": "El Kahera Housing"
+  },
+  "0c4ae096-b4d3-4d10-8828-527a391cdf89": {
+    "symbol": "ELNA",
+    "name": "El Nasr for Manufacturing Agricultural Crops"
+  },
+  "aef0e583-8a79-439e-8d15-0f78ceca2c6c": {
+    "symbol": "ELSH",
+    "name": "El Shams Housing & Urbanization"
+  },
+  "73dc1043-6da4-475d-b01d-f98fc2396e2b": {
+    "symbol": "ELWA",
+    "name": "El Wadi Company for Touristic Investment"
+  },
+  "7e055f68-bec7-4624-9564-02777716a08e": {
+    "symbol": "EMFD",
+    "name": "Emaar Misr"
+  },
+  "0bed6b0b-cee6-4bc6-9ca0-dd62d3873a96": {
+    "symbol": "ENGC",
+    "name": "Engineering Industries (ICON)"
+  },
+  "f4f68067-da95-44ff-9ddf-566006614a87": {
+    "symbol": "EOSB",
+    "name": "El Orouba Securities Brokerage"
+  },
+  "601a6aa7-2d39-477a-b324-02a329858362": {
+    "symbol": "EPCO",
+    "name": "Egypt for Poultry"
+  },
+  "63813c1b-fb98-49d9-b2c2-2300c94238f4": {
+    "symbol": "EPPK",
+    "name": "El Ahram Company for Printing & Packing"
+  },
+  "5b447542-552b-4ad9-b7ca-29770ec32188": {
+    "symbol": "ESAC",
+    "name": "Egypt - South Africa for Communication"
+  },
+  "1e89aa68-f060-46a7-b0a3-40b47b45336d": {
+    "symbol": "ESRS",
+    "name": "Ezz Steel"
+  },
+  "72d4fb56-144d-403a-b55c-d07d9bfb6c49": {
+    "symbol": "ETEL",
+    "name": "Telecom Egypt"
+  },
+  "574c6ce9-5883-4a17-9109-0045e0399329": {
+    "symbol": "ETRS",
+    "name": "Egyptian Transport (EGYTRANS)"
+  },
+  "fc3efdea-9857-42f3-8127-daf6befb406d": {
+    "symbol": "EXPA",
+    "name": "Export Development Bank of Egypt (EDBE)"
+  },
+  "db27b49f-5a1d-4162-8f37-8aa3c4fc8fe8": {
+    "symbol": "FAIT",
+    "name": "Faisal Islamic Bank of Egypt"
+  },
+  "4ea1c50d-53cf-4305-8826-35a6bcdeb08c": {
+    "symbol": "FAITA",
+    "name": "Faisal Islamic Bank of Egypt - In US Dollars"
+  },
+  "9ef6e297-b491-4b72-8b55-4446a40d87df": {
+    "symbol": "FERC",
+    "name": "Ferchem Misr for Fertilizers & Chemicals"
+  },
+  "93cb6ce4-26a5-4ef3-87bb-937dbe32942d": {
+    "symbol": "FIRE",
+    "name": "First Investment Company & Real Estate Development"
+  },
+  "56f29fd7-8cdb-4628-980b-2564161148b5": {
+    "symbol": "FNAR",
+    "name": "Al Fanar Contracting Construction Trade Import & Export Company"
+  },
+  "42c3b5ca-018a-47e0-b020-f55b1291a353": {
+    "symbol": "FTNS",
+    "name": "Fitness Prime ( FTNS )"
+  },
+  "8deaa69a-bffe-4c5a-99e6-2ba172ccaa2f": {
+    "symbol": "FWRY",
+    "name": "Fawry For Banking Technology And Electronic Payment"
+  },
+  "bcf2c825-696a-49a2-bd8c-bc8f2e6830ec": {
+    "symbol": "GBCO",
+    "name": "GB Corp."
+  },
+  "4b236e59-fe8f-4e92-bf27-a06d9ff0d580": {
+    "symbol": "GDWA",
+    "name": "Jadwa Industrial Development"
+  },
+  "162ec400-738a-44e7-a860-bd4a8dfadec1": {
+    "symbol": "GGCC",
+    "name": "Giza General Contracting"
+  },
+  "2f1671ff-61c7-4a96-89ae-a7f90c6c6c0b": {
+    "symbol": "GGRN",
+    "name": "Go Green for agricultural investment and development"
+  },
+  "61ca2f2c-90ec-446e-b9f8-00102d979b26": {
+    "symbol": "GIHD",
+    "name": "Gharbia Islamic Housing Development"
+  },
+  "c2cd41d0-4981-4f20-9357-05303057450e": {
+    "symbol": "GMCI",
+    "name": "GMC Group for Industrial, Commercial & Financial Investments"
+  },
+  "599cdf50-1b2a-46ad-9f90-8789f75bee96": {
+    "symbol": "GOCO",
+    "name": "Golden Coast Company"
+  },
+  "925eb359-849a-46e3-9112-28bd70566046": {
+    "symbol": "GOUR",
+    "name": "Gourmet Egypt.Com Foods"
+  },
+  "8538bccb-7390-4fe0-be8a-3a8cece47559": {
+    "symbol": "GPIM",
+    "name": "GPI For Urban Growth"
+  },
+  "3e794e4d-a4f4-4298-b9f6-6bbab7dc082c": {
+    "symbol": "GPPL",
+    "name": "Golden Pyramids Plaza"
+  },
+  "2c1eaba2-3894-4321-a0ab-2188d0abb349": {
+    "symbol": "GRA",
+    "name": "Granite Fund"
+  },
+  "3f556c57-4dda-466e-8a5c-40128e9aecde": {
+    "symbol": "GRCA",
+    "name": "Grand Investment Capital"
+  },
+  "3a5d9269-98ad-43f5-b9a4-3bf93de70eea": {
+    "symbol": "GSSC",
+    "name": "General Silos & Storage"
+  },
+  "c22ed3da-af3c-494c-baa9-2805655ec060": {
+    "symbol": "GTEX",
+    "name": "GTEX For Commercial And Industrial"
+  },
+  "5735ba16-6ae0-41d9-9f31-4238b0e2c38a": {
+    "symbol": "GTHE",
+    "name": "Global Telecom Holding"
+  },
+  "d01c3ff6-e650-41b6-8f7f-5c084547abb7": {
+    "symbol": "GTWL",
+    "name": "Golden Textiles & Clothes Wool"
+  },
+  "5933c3ca-afd2-449f-af69-f70e8fa19f4a": {
+    "symbol": "HBCO",
+    "name": "Heibco for Commercial Investments & Real Estate Development"
+  },
+  "0d1c70e1-ed46-4ffe-9334-b469fa81349b": {
+    "symbol": "HCFI",
+    "name": "The Holding Company for Financial Investments (Lakah Group)"
+  },
+  "b5fe3546-023f-4a8a-8d79-4116c058ee12": {
+    "symbol": "HDBK",
+    "name": "Housing & Development Bank"
+  },
+  "06dc5785-43ff-49f0-bcdc-97f89f55917d": {
+    "symbol": "HELI",
+    "name": "Heliopolis Housing"
+  },
+  "b4b90e9c-fcf4-442b-9266-96ce1666fac4": {
+    "symbol": "HRHO",
+    "name": "EFG Holding"
+  },
+  "5a76ab49-2015-4343-9038-f722d3c1d23f": {
+    "symbol": "IBCT",
+    "name": "International Business Corporation for Trading & Agencies"
+  },
+  "cb95ebe9-93e0-4603-9bb7-8e0e5e3bbb15": {
+    "symbol": "ICFC",
+    "name": "International Company for Fertilizers & Chemicals"
+  },
+  "2dc1a245-af66-4790-b570-055a4878c6f3": {
+    "symbol": "ICID",
+    "name": "International Co for Investment & Development"
+  },
+  "5b111390-9913-4722-ad86-482dd6485c22": {
+    "symbol": "ICLE",
+    "name": "International Company for Leasing (Incolease)"
+  },
+  "8a46fb4f-7f8f-4f01-83d9-04f5decb36b8": {
+    "symbol": "ICMI",
+    "name": "International Company for Medical Industries"
+  },
+  "250a3cf6-a049-4867-89e4-0983d73f268b": {
+    "symbol": "IDRE",
+    "name": "Ismailia Development & Real Estate Company"
+  },
+  "7a22948f-c6f7-4c48-89b0-7a5566dc3797": {
+    "symbol": "IEEC",
+    "name": "Industrial and Engineering Enterprises"
+  },
+  "1f05d512-25bd-4dfb-819e-da92f97e947f": {
+    "symbol": "IFAP",
+    "name": "International Agricultural Products"
+  },
+  "7441d116-7152-4e62-bbaa-cc019de99483": {
+    "symbol": "INEG",
+    "name": "Integrated Engineering Group S.A.E"
+  },
+  "55abcabf-0a3a-4e70-a1bc-36eb705f99df": {
+    "symbol": "INFI",
+    "name": "Ismailia National Food Industries (Foodico)"
+  },
+  "c7149df9-cf54-4054-807c-14ef2ed6663d": {
+    "symbol": "IRAX",
+    "name": "Al Ezz Dekheila Steel Company"
+  },
+  "9bcbdc00-2ecf-4eb4-b720-bc797c01c23b": {
+    "symbol": "IRON",
+    "name": "Egyptian Iron & Steel"
+  },
+  "8e34cb8a-9732-4f9f-968e-cd2b38a0950f": {
+    "symbol": "ISMA",
+    "name": "Ismailia Misr Poultry"
+  },
+  "4bd6861b-b0d0-4e4b-a04b-72665b8dd2a9": {
+    "symbol": "ISMQ",
+    "name": "Iron and Steel for Mines and Quarries"
+  },
+  "309dbc51-20e2-426a-b0fc-2d0cf36d8abc": {
+    "symbol": "ISPH",
+    "name": "Ibnsina Pharma"
+  },
+  "e11062f0-6eab-4e53-9338-01af4843edfb": {
+    "symbol": "JUFO",
+    "name": "Juhayna Food Industries"
+  },
+  "93fc8925-e47d-4444-9c8a-e7c066d6a08b": {
+    "symbol": "KABO",
+    "name": "El Nasr Clothes & Textiles"
+  },
+  "b31f0dda-44b6-4ecc-abe9-ce9564fbf9b8": {
+    "symbol": "KASABF",
+    "name": "Certificates Of Odin Egyptian Equity Investment Fund-KASAB"
+  },
+  "84660626-df3f-4d75-9833-0be40ba90060": {
+    "symbol": "KRDI",
+    "name": "Al Khair River for Development, Agricultural Investment & Environmental Services"
+  },
+  "b7ea27ef-32f4-4d04-93d6-9b586039f05b": {
+    "symbol": "KWIN",
+    "name": "El Kahera El Watania Investment"
+  },
+  "33d11474-f8ae-4048-9447-0860bd69fa31": {
+    "symbol": "KZPC",
+    "name": "Kafr El Zayat Pesticides"
+  },
+  "4fba8d4c-bd64-4e06-9c87-45ab0b749b88": {
+    "symbol": "LCSW",
+    "name": "Lecico Egypt"
+  },
+  "66363218-ab59-46e5-8740-63351418f365": {
+    "symbol": "LUTS",
+    "name": "Lotus for Development & Agricultural Investment"
+  },
+  "9d31e681-b8ce-4ac0-8d4f-e7883b9615e3": {
+    "symbol": "MAAL",
+    "name": "Marseille Almasreia Alkhalegeya for Holding Investment"
+  },
+  "6500a04b-041e-4bb3-bff8-dbbf78178440": {
+    "symbol": "MASR",
+    "name": "Madinet Masr For Housing and Development"
+  },
+  "aac20e7f-6ea6-4a52-ac42-a9b133d5ed92": {
+    "symbol": "MBEG",
+    "name": "M.B Engineering"
+  },
+  "ae64c7ed-f9f9-4aab-b3f4-3a0afb28e3da": {
+    "symbol": "MBSC",
+    "name": "Misr Beni Suef Cement"
+  },
+  "78f222bd-7a2c-4261-bba2-72f95b733b81": {
+    "symbol": "MCQE",
+    "name": "Misr Cement (QENA)"
+  },
+  "493aed3b-d27c-424b-bf2d-768daacfebf0": {
+    "symbol": "MCRO",
+    "name": "Macro Group"
+  },
+  "211ba077-2d0e-420a-a01b-167acdd2c496": {
+    "symbol": "MCRO_r1",
+    "name": "Rights Issue of Macro Group"
+  },
+  "cd47e0eb-a323-4c74-b983-e980495217d0": {
+    "symbol": "MEGM",
+    "name": "Middle East Glass Manufacturing"
+  },
+  "7c8fe5f9-099b-4920-a7a9-5e2f40176638": {
+    "symbol": "MENA",
+    "name": "Mena Touristic & Real Estate Investment"
+  },
+  "1309da47-ce96-4a88-9653-65e936fadf9c": {
+    "symbol": "MEPA",
+    "name": "Medical Packaging Company"
+  },
+  "da294eaa-5282-430f-b6be-8d85a907f878": {
+    "symbol": "MFPC",
+    "name": "Misr Fertilizers Production"
+  },
+  "20cc4e21-db01-4f75-b1a3-e6c56c9f838c": {
+    "symbol": "MFSC",
+    "name": "Misr Duty Free Shops"
+  },
+  "0544986a-77ff-40d5-af88-1b4e85febda5": {
+    "symbol": "MHOT",
+    "name": "Misr Hotels"
+  },
+  "5f24f21c-4b35-4d64-9683-bfbf65142ddd": {
+    "symbol": "MICH",
+    "name": "Misr Chemical Industries"
+  },
+  "5e7497d1-f8ae-4b96-a895-5f6de6839303": {
+    "symbol": "MILS",
+    "name": "North Cairo Mills"
+  },
+  "01a5e511-bd06-4b3b-9a6e-936190bebfe3": {
+    "symbol": "MIPH",
+    "name": "Minapharm Pharmaceuticals"
+  },
+  "dfe51d88-fcf6-457b-ad3a-e5de33533987": {
+    "symbol": "MISR",
+    "name": "Misr Intercontinental for Granite & Marble (EGYSTONE)"
+  },
+  "fd43b609-5ac4-44f6-b937-395e5cdee788": {
+    "symbol": "MKIT",
+    "name": "Misr Kuwait Investment and Trading"
+  },
+  "81ddf0ea-03c3-4412-8563-a0b93ec7e61e": {
+    "symbol": "MMAT",
+    "name": "Marsa Alam for Tourism Development"
+  },
+  "94f44109-3025-41bc-8427-1dd814eb314b": {
+    "symbol": "MOED",
+    "name": "Egyptian Modern Education Systems"
+  },
+  "b104c989-729b-4c15-8995-55c5defdc556": {
+    "symbol": "MOIL",
+    "name": "Maridive & Oil Services"
+  },
+  "0a2f985f-2cd5-4a65-be4e-b251850477a1": {
+    "symbol": "MOIN",
+    "name": "Mohandes Insurance"
+  },
+  "d9104ba0-89d9-4876-87ea-95f88dd26c63": {
+    "symbol": "MOSC",
+    "name": "Misr Oils & Soap"
+  },
+  "357992b3-7d45-4ecc-acc8-295235c2c6e2": {
+    "symbol": "MPCI",
+    "name": "Memphis Pharmaceuticals"
+  },
+  "2d0e64b6-5789-460e-add7-1bbb7007390d": {
+    "symbol": "MPCO",
+    "name": "Mansourah Poultry"
+  },
+  "1a0ce34b-017a-4a10-b8d2-85f36977d133": {
+    "symbol": "MPRC",
+    "name": "Egyptian Media Production City"
+  },
+  "d8dc9955-ef7a-42f2-8e89-911ee2d362e8": {
+    "symbol": "MTF",
+    "name": "Misr Takaful Fund"
+  },
+  "ef690e13-4f28-410f-8309-cc8b942b3406": {
+    "symbol": "MTIE",
+    "name": "MM Group for Industry & International Trade"
+  },
+  "91f13af6-7354-4784-9010-e8eff460b0c7": {
+    "symbol": "NAHO",
+    "name": "Naeem Holding"
+  },
+  "68e68393-b33a-40e8-931f-72330b1f1e01": {
+    "symbol": "NAM",
+    "name": "NBK Al Mizan Balanced Fund"
+  },
+  "2e866999-6559-4ec7-9cdb-ed77a9300d92": {
+    "symbol": "NAPR",
+    "name": "National Printing"
+  },
+  "200ea9bb-e240-4343-9e0a-43400b885b6c": {
+    "symbol": "NARE",
+    "name": "Al Naeem Real Estate Holding Group"
+  },
+  "0c705cae-abed-49b2-9c9f-d5eed8a8c2af": {
+    "symbol": "NBKE",
+    "name": "National Bank of Kuwait - Egypt"
+  },
+  "257e7097-757d-43a5-b84e-32d678ec3dd3": {
+    "symbol": "NCCW",
+    "name": "Nasr Company for Civil Works"
+  },
+  "f7f0c607-ba7f-4499-a9a6-c65ef47f5883": {
+    "symbol": "NCGC",
+    "name": "Nile Cotton Ginning"
+  },
+  "d8664cf2-508e-4b45-9908-9af85c9011ba": {
+    "symbol": "NCS",
+    "name": "NI Capital Sahmy 70 Fund"
+  },
+  "32a1d595-c648-459e-829c-4c3359ada7cb": {
+    "symbol": "NEDA",
+    "name": "Northern Upper Egypt Development & Agricultural Production"
+  },
+  "59a391c4-c1ca-46d1-855f-b59127515280": {
+    "symbol": "NHPS",
+    "name": "National Housing for Professional Syndicates"
+  },
+  "8f33dc8c-45ef-48a5-940d-78bc4ec5cd94": {
+    "symbol": "NINH",
+    "name": "Nozha International Hospital"
+  },
+  "61936656-fb8c-469c-88b2-08a8242d53cd": {
+    "symbol": "NIPH",
+    "name": "El-Nile Company for Pharmaceuticals & Chemical Industries"
+  },
+  "32ef15d3-6e81-4813-86b1-39c4664bfef7": {
+    "symbol": "NIPH_r2",
+    "name": "Rights Issue of El-Nile Company for Pharmaceuticals & Chemical Industries"
+  },
+  "41e5ecd6-3ffe-4e01-ba70-4fcc1c436ee4": {
+    "symbol": "NMF",
+    "name": "NM Sharia Equity Fund"
+  },
+  "51bca4cb-9f3d-4a86-9aee-791b15e01ec1": {
+    "symbol": "OBRI",
+    "name": "El Obour Real Estate Investment"
+  },
+  "c7a0594a-bfc7-4a0d-ad32-e40d5fced277": {
+    "symbol": "OCDI",
+    "name": "Six of October Development & Investment (SODIC)"
+  },
+  "00d2ea96-08f1-4c45-ab27-29db058cd25b": {
+    "symbol": "OCPH",
+    "name": "October Pharma"
+  },
+  "139ea77d-09b1-4ae8-8eed-5481bbe64060": {
+    "symbol": "ODIN",
+    "name": "ODIN Investments"
+  },
+  "5ff89774-75f4-40bf-9de9-1a03d10d563b": {
+    "symbol": "OFH",
+    "name": "O B Financial Holding S.A.E"
+  },
+  "7df609c9-49b7-41d1-9683-c3bc74a54ebb": {
+    "symbol": "OIH",
+    "name": "Orascom Investment Holding"
+  },
+  "5f4ebe3a-dd15-433d-9617-8bd3efe77b4c": {
+    "symbol": "OLFI",
+    "name": "Obour Land for Food Industries"
+  },
+  "9f726855-e875-4479-aee5-48487972496e": {
+    "symbol": "ORAS",
+    "name": "Orascom Construction PLC"
+  },
+  "bfbd4cf2-50c6-4e1c-aa2f-8178462da6db": {
+    "symbol": "ORHD",
+    "name": "Orascom Development Egypt"
+  },
+  "42e1e890-ee93-415e-8102-96f45f68b1c0": {
+    "symbol": "ORWE",
+    "name": "Oriental Weavers"
+  },
+  "2650e22e-cb30-4b7b-b3dd-53b52f4b4560": {
+    "symbol": "PACH",
+    "name": "Paint & Chemicals Industries (PACHIN)"
+  },
+  "08d69663-398f-4f57-b0fc-01b301a5d028": {
+    "symbol": "PCM",
+    "name": "PFI Cashi Fund"
+  },
+  "ccc533f3-c022-4b03-9b8d-f25e3c3a7260": {
+    "symbol": "PGM",
+    "name": "GIG Money Market"
+  },
+  "bd8632e3-6625-443c-bf70-6f8e9a9060e5": {
+    "symbol": "PHAR",
+    "name": "Egyptian International Pharmaceuticals (EIPICO)"
+  },
+  "20187d98-39f9-4be0-8e03-ef104dd858e0": {
+    "symbol": "PHDC",
+    "name": "Palm Hills Developments"
+  },
+  "486e8299-9b66-46a8-a1fc-86d17425149c": {
+    "symbol": "PHGC",
+    "name": "Premium Healthcare Group"
+  },
+  "5751cb9f-9b7d-4ae4-b84b-66652ebaab23": {
+    "symbol": "PHTV",
+    "name": "Pyramisa Hotels"
+  },
+  "76207ce9-a15d-4f5b-9557-1f0d206f1b0d": {
+    "symbol": "POUL",
+    "name": "Cairo Poultry"
+  },
+  "306d8479-a44d-46bc-b8b6-9fa3723b28f7": {
+    "symbol": "PRCL",
+    "name": "Ceramic & Porcelain (Sheeni)"
+  },
+  "5c45022a-1fc0-422e-bbb8-e0ed9d71675b": {
+    "symbol": "PRDC",
+    "name": "Pioneers Properties for Development"
+  },
+  "1034b613-bdde-442e-bb3b-d6d94fd90015": {
+    "symbol": "PRMH",
+    "name": "Prime Holding"
+  },
+  "c993a1e4-7d47-48d5-8699-7dd98c17dbb3": {
+    "symbol": "QNBE",
+    "name": "Qatar National Bank"
+  },
+  "0ddf8f54-5252-4e19-96eb-20f4b72e3865": {
+    "symbol": "RACC",
+    "name": "Raya Contact Center"
+  },
+  "6d538bb6-12ef-4efa-b892-29bc6d0164cf": {
+    "symbol": "RAKT",
+    "name": "Rakta Paper Manufacturing"
+  },
+  "a6921595-902b-4b36-96ce-3a7f718265d4": {
+    "symbol": "RAYA",
+    "name": "Raya Holding for Financial Investments"
+  },
+  "22c917eb-8aaa-4e6e-a6d3-aac25855ec3a": {
+    "symbol": "RKAZ",
+    "name": "REKAZ Financial Holding"
+  },
+  "d5540116-07b3-4230-ad23-669a3b390c70": {
+    "symbol": "RMDA",
+    "name": "Rameda Pharmaceutical Company"
+  },
+  "28d1685c-72bc-4a47-a1c5-5d711c1712ec": {
+    "symbol": "RMTV",
+    "name": "Rowad Misr Tourism Investment"
+  },
+  "80147127-760d-411b-8437-8ea21a95d3be": {
+    "symbol": "ROTO",
+    "name": "Rowad Tourism (Al Rowad)"
+  },
+  "ca2c9a5b-cd59-4829-ad74-4a0b28cedc3f": {
+    "symbol": "RREI",
+    "name": "Arab Real Estate Investment Co. (ALICO)"
+  },
+  "1ace7200-50bf-4df6-9a36-2869997e0d9b": {
+    "symbol": "RTVC",
+    "name": "Remco for Touristic Villages Construction"
+  },
+  "ee95e71f-ce94-495c-9fba-4670962de73d": {
+    "symbol": "RUBX",
+    "name": "Rubex International for Plastic & Acrylic Manufacturing"
+  },
+  "7422bda1-ceb4-40d3-ba5b-0778ca040df1": {
+    "symbol": "SAIB",
+    "name": "Societe Arabe Internationale De Banque (SAIB)"
+  },
+  "5eb4d4e6-87df-4683-b406-3a5f5a4f7fa3": {
+    "symbol": "SAUD",
+    "name": "Al Baraka Bank Egypt"
+  },
+  "25599200-8ca8-4499-ba28-f388c8301d8e": {
+    "symbol": "SCEM",
+    "name": "Sinai Cement"
+  },
+  "52679d5a-b6ae-4ddb-8e3d-caf8d89a12a1": {
+    "symbol": "SCFM",
+    "name": "South Cairo & Giza Mills & Bakeries"
+  },
+  "acb28e48-ac74-4787-856e-7e7eb513bee2": {
+    "symbol": "SCTS",
+    "name": "Suez Canal Company for Technology Settling"
+  },
+  "0d352d42-ac94-491b-87a3-56765493dd92": {
+    "symbol": "SDTI",
+    "name": "Sharm Dreams Co. for Tourism Investment"
+  },
+  "88fe973a-4bbe-498a-8faa-e02917bc9dcb": {
+    "symbol": "SEIG",
+    "name": "Saudi Egyptian Investment & Finance"
+  },
+  "53772d27-8a39-4bd3-aa62-1dd95e01eab3": {
+    "symbol": "SHARIAH",
+    "name": "EGX33 (Sharia)"
+  },
+  "8203f03c-d35e-4c61-8b92-20cee0e886c6": {
+    "symbol": "SIMO",
+    "name": "Paper Middle East"
+  },
+  "31cba3ac-592a-439a-82c7-d0624b00a577": {
+    "symbol": "SIPC",
+    "name": "Sabaa International Company for Pharmaceutical & Chemical"
+  },
+  "8d53854c-b8e5-4b07-8ba7-9a6aea7e9c65": {
+    "symbol": "SKPC",
+    "name": "Sidi Kerir Petrochemicals"
+  },
+  "8a00cafe-a9b7-4cc1-bb27-f7dec2d5265b": {
+    "symbol": "SMFR",
+    "name": "Samad Misr (EGYFERT)"
+  },
+  "fbaa1bdd-aaef-4e7e-8c86-650e9ce4cc51": {
+    "symbol": "SMPP",
+    "name": "Modern Shorouk Printing & Packaging"
+  },
+  "c87cd97b-0f63-4334-9f8e-bd3945a7f5ac": {
+    "symbol": "SNFC",
+    "name": "Sharkia National Food"
+  },
+  "47f109a7-f0c7-4f13-a65f-5c4345708e0f": {
+    "symbol": "SNFI",
+    "name": "Sohag National Company for Food Industries"
+  },
+  "275ece50-6a7b-4661-8ffd-09cc9befd48c": {
+    "symbol": "SPHT",
+    "name": "El Shams Pyramids for Hotels & Touristic Projects"
+  },
+  "92d63dbe-5403-4ec6-ac8a-f1d8e5105793": {
+    "symbol": "SPIN",
+    "name": "Alexandria Spinning & Weaving (SPINALEX)"
+  },
+  "62e5c634-c148-4992-95e6-26ad5c371ff5": {
+    "symbol": "SPMD",
+    "name": "Speed Medical"
+  },
+  "f9a60ef8-9341-46c9-8f38-6e39aed4aa07": {
+    "symbol": "SUCE",
+    "name": "Suez Cement"
+  },
+  "46c3b570-3188-4638-bd2d-f6ba9c6cc84b": {
+    "symbol": "SUGR",
+    "name": "Delta Sugar"
+  },
+  "b93e124f-87d7-49ca-901e-baae0e7771a0": {
+    "symbol": "SVCE",
+    "name": "South Valley Cement"
+  },
+  "a3fa1cbc-2c44-4f36-b20b-47070a83d529": {
+    "symbol": "SWDY",
+    "name": "Elsewedy Electric"
+  },
+  "da188856-c4bc-464b-995b-6ef8ead6673c": {
+    "symbol": "TALM",
+    "name": "Taaleem Management Services"
+  },
+  "7841c651-09f2-4bac-8268-0776b7022df0": {
+    "symbol": "TANM",
+    "name": "Tanmiya for Real Estate Investment"
+  },
+  "4d472441-9aaf-430b-b09d-30687da21fe7": {
+    "symbol": "TAQA",
+    "name": "TAQA Arabia"
+  },
+  "0bc56676-9909-40da-9448-3f151331780e": {
+    "symbol": "TMGH",
+    "name": "Talaat Moustafa Group"
+  },
+  "0adc9072-a884-4a15-97ec-396aac4742cd": {
+    "symbol": "TORA",
+    "name": "Torah Cement"
+  },
+  "0c016b9c-86c8-441b-8d9e-70730ab62efc": {
+    "symbol": "TRTO",
+    "name": "TransOceans Tours"
+  },
+  "f1a716f0-89ed-44ad-9aa0-721ea51e7910": {
+    "symbol": "TWSA",
+    "name": "Tawasoa For Factoring"
+  },
+  "6e830590-c624-48ca-83c5-a645a7796046": {
+    "symbol": "UASG",
+    "name": "United Arab Shipping"
+  },
+  "02b16e73-cf65-4b4d-97ec-fa79a80a8287": {
+    "symbol": "UBEE",
+    "name": "The United Bank"
+  },
+  "c2a9fb69-d347-43a7-a8bb-ce632d61a817": {
+    "symbol": "UEFM",
+    "name": "Upper Egypt Flour Mills"
+  },
+  "a00304f5-ad6c-4674-832d-c3a0c4695aff": {
+    "symbol": "UEGC",
+    "name": "Elsaeed Contracting & Real Estate Investment Company SCCD"
+  },
+  "a711c858-df6a-453e-9281-9ca3292d8f8b": {
+    "symbol": "UNIP",
+    "name": "Universal for Paper & Packaging Materials (UNIPACK)"
+  },
+  "560488bc-eb27-4028-9a5f-987bdb84fe6e": {
+    "symbol": "UNIT",
+    "name": "United Housing & Development"
+  },
+  "83886809-6165-4b50-9030-ea2cf0110a4a": {
+    "symbol": "UPMS",
+    "name": "Union Pharmacist Company for Medical Services & Investment"
+  },
+  "30be783b-1c38-40e5-b49c-835c6bf88608": {
+    "symbol": "USD/EGP",
+    "name": "USD/EGP"
+  },
+  "d2836467-b60d-4338-b99a-33efdbebdfff": {
+    "symbol": "UTOP",
+    "name": "Utopia Real Estate Investment and Tourism"
+  },
+  "d53641c9-f245-48fd-bdeb-c5745b3356d7": {
+    "symbol": "VALU",
+    "name": "U Consumer Finance"
+  },
+  "59b8eacf-5cf9-4729-8618-e5b85d301781": {
+    "symbol": "VERT",
+    "name": "Vertika for Industry & Trade"
+  },
+  "95f9d2ac-b3ec-412e-9528-e6309f3a65ee": {
+    "symbol": "VLMR",
+    "name": "Valmore Holding - (USD)"
+  },
+  "dec7cea6-4d68-4380-9410-4188c2547599": {
+    "symbol": "VLMRA",
+    "name": "Valmore Holding (EGP)"
+  },
+  "20948fc9-7d36-4b6a-92a0-60e8872b806d": {
+    "symbol": "WATP",
+    "name": "Modern Company for water proofing"
+  },
+  "cdface66-0140-4888-a74a-097907551550": {
+    "symbol": "WCDF",
+    "name": "Middle & West Delta Flour Mills"
+  },
+  "a546f379-e3f9-4250-b299-a34e11361dbc": {
+    "symbol": "WKOL",
+    "name": "Wadi Kom Ombo Land Reclamation"
+  },
+  "312c605f-42ff-4517-9a74-29c36d3e24d5": {
+    "symbol": "ZEOT",
+    "name": "Extracted Oils"
+  },
+  "b948136e-5789-430c-8872-e9df66b021b0": {
+    "symbol": "ZMID",
+    "name": "Zahraa Maadi Investment & Development"
+  }
+}
