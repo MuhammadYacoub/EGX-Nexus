@@ -224,6 +224,11 @@ services:
         condition: service_healthy
       mysql:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${DL_ENGINE_PORT:-3008}/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - ./services/deep-learning-engine:/app
     # Uncomment deploy block below if running on a GPU-enabled Docker host to enable CUDA
@@ -235,11 +240,25 @@ services:
     #           count: 1
     #           capabilities: [gpu]
 
+  ollama:
+    image: ollama/ollama:latest
+    container_name: egx_ollama
+    restart: always
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
   nginx:
     image: nginx:alpine
     container_name: egx_nginx
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - ./infrastructure/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
@@ -256,3 +275,4 @@ volumes:
   mysql_
   timescale_
   redis_
+  ollama_models

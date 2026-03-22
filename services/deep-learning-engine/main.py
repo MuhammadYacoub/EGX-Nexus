@@ -26,6 +26,11 @@ def read_root():
         "hybrid_mode": True
     }
 
+@app.get("/health")
+def health_check():
+    """Health check endpoint for Docker container orchestration."""
+    return {"status": "ok"}
+
 @app.post("/predict")
 def predict_trend(request: PredictionRequest):
     """

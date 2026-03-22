@@ -1,64 +1,143 @@
-import express from 'express';
 import cron from 'node-cron';
-import yahooFinance from 'yahoo-finance2';
 import mysql from 'mysql2/promise';
-import { createClient } from 'redis';
+import yahooFinance from 'yahoo-finance2';
+import dotenv from 'dotenv';
+import http from 'http';
 
-const app = express();
-app.use(express.json());
+dotenv.config();
 
-const db = await mysql.createPool({ uri: process.env.MYSQL_URL });
-const redis = createClient({ url: process.env.REDIS_URL || 'redis://redis:6379' });
-await redis.connect();
+// List of some popular EGX tickers available on Yahoo Finance (typically ending in .CA)
+const EGX_TICKERS = [
+  'COMI.CA',  // Commercial International Bank
+  'FWRY.CA',  // Fawry
+  'HRHO.CA',  // EFG Hermes
+  'EAST.CA',  // Eastern Company
+  'SWDY.CA',  // Elsewedy Electric
+  'TMGH.CA',  // Talaat Moustafa Group
+  'ABUK.CA',  // Abu Qir Fertilizers
+  'ISPH.CA',  // Ibnsina Pharma
+  'ORHD.CA',  // Orascom Development Egypt
+  'EKHO.CA'   // Egypt Kuwait Holding
+];
 
-// Fetch & store OHLCV for one symbol
-async function fetchHistory(symbol, period = '6mo') {
-  const ticker = `${symbol}.CA`;
-  const result = await yahooFinance.historical(ticker, { period1: new Date(Date.now() - 180*86400*1000) });
-  if (!result?.length) return 0;
-  for (const row of result) {
-    await db.execute(
-      `INSERT IGNORE INTO stock_prices (symbol, date, open, high, low, close, volume)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [symbol, row.date.toISOString().slice(0,10), row.open, row.high, row.low, row.close, row.volume]
-    );
+// Helper to pause execution to avoid aggressive rate limiting
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function createDbConnection() {
+  const connectionUrl = process.env.MYSQL_URL;
+  if (!connectionUrl) {
+    throw new Error("MYSQL_URL environment variable is not set.");
   }
-  await redis.set(`last_harvest:${symbol}`, Date.now(), { EX: 86400 });
-  return result.length;
+  // Remove 'mysql://' protocol as mysql2 sometimes expects direct parameters or slightly different uri formats
+  // We'll rely on the standard mysql2 parsing
+  return await mysql.createConnection(connectionUrl);
 }
 
-// Fetch all symbols from DB
-async function fetchAll() {
-  const [rows] = await db.execute('SELECT symbol FROM stocks');
-  let total = 0;
-  for (const { symbol } of rows) {
-    try {
-      const n = await fetchHistory(symbol);
-      total += n;
-      console.log(`✅ ${symbol}: ${n} rows`);
-    } catch (e) {
-      console.error(`❌ ${symbol}: ${e.message}`);
+async function harvestDataForTicker(ticker, db) {
+  try {
+    console.log(`[HARVESTER] Fetching historical OHLCV data for: ${ticker}`);
+
+    // Fetch last 7 days of daily data just to be safe with updates
+    const endDate = new Date();
+    const startDate = new Date();
+    startDate.setDate(endDate.getDate() - 7);
+
+    const queryOptions = {
+      period1: startDate,
+      period2: endDate,
+      interval: '1d'
+    };
+
+    const results = await yahooFinance.historical(ticker, queryOptions);
+
+    if (!results || results.length === 0) {
+      console.log(`[HARVESTER] No data found for ${ticker} in the requested period.`);
+      return;
+    }
+
+    const query = `
+      INSERT INTO stock_prices (symbol, date, open, high, low, close, volume)
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+      ON DUPLICATE KEY UPDATE
+      open = VALUES(open),
+      high = VALUES(high),
+      low = VALUES(low),
+      close = VALUES(close),
+      volume = VALUES(volume)
+    `;
+
+    for (const row of results) {
+      // row.date is usually a Date object or string
+      const dateStr = row.date.toISOString().split('T')[0];
+      await db.execute(query, [
+        ticker,
+        dateStr,
+        row.open,
+        row.high,
+        row.low,
+        row.close,
+        row.volume
+      ]);
+    }
+
+    console.log(`[HARVESTER] Successfully updated ${results.length} rows for ${ticker}.`);
+  } catch (error) {
+    console.error(`[HARVESTER] Error processing ${ticker}:`, error.message);
+  }
+}
+
+async function runHarvestingJob() {
+  console.log('[HARVESTER] Starting daily harvesting job...');
+  let db;
+  try {
+    db = await createDbConnection();
+    console.log('[HARVESTER] Connected to MySQL database.');
+
+    for (const ticker of EGX_TICKERS) {
+      await harvestDataForTicker(ticker, db);
+      // Wait 3 seconds between requests to respect Yahoo Finance limits
+      await delay(3000);
+    }
+    console.log('[HARVESTER] Daily harvesting job completed successfully.');
+  } catch (error) {
+    console.error('[HARVESTER] Fatal error during harvesting job:', error);
+  } finally {
+    if (db) {
+      await db.end();
+      console.log('[HARVESTER] Database connection closed.');
     }
   }
-  console.log(`🏁 Done — total rows: ${total}`);
 }
 
-// Schedule: every day at 7:00 PM Cairo time (after EGX close)
-cron.schedule('0 19 * * 0-4', fetchAll, { timezone: 'Africa/Cairo' });
+// -------------------------------------------------------------
+// Initialization & Cron Setup
+// -------------------------------------------------------------
 
-// API endpoints
-app.get('/health', (_, res) => res.json({ service: 'data-harvester', status: 'ok' }));
-app.post('/harvest/:symbol', async (req, res) => {
-  try {
-    const n = await fetchHistory(req.params.symbol);
-    res.json({ symbol: req.params.symbol, rows: n });
-  } catch (e) {
-    res.status(500).json({ error: e.message });
+// Schedule the cron job to run every day at 7:00 PM (19:00) Cairo time
+cron.schedule('0 19 * * *', () => {
+  runHarvestingJob();
+}, {
+  scheduled: true,
+  timezone: "Africa/Cairo"
+});
+
+console.log('[HARVESTER] Service initialized. Cron scheduled for 19:00 Cairo time daily.');
+
+// Optional: Run once on startup if you want immediate hydration
+// setTimeout(runHarvestingJob, 5000);
+
+// Basic HTTP server for Docker health checks
+const server = http.createServer((req, res) => {
+  if (req.url === '/health') {
+    res.writeHead(200);
+    res.end('OK');
+  } else {
+    res.writeHead(404);
+    res.end('Not Found');
   }
 });
-app.post('/harvest-all', async (_, res) => {
-  fetchAll(); // run async
-  res.json({ status: 'started' });
-});
 
-app.listen(3005, () => console.log('🌾 Data Harvester running on :3005'));
+const PORT = process.env.PORT || 3005;
+server.listen(PORT, () => {
+  console.log(`[HARVESTER] Healthcheck server listening on port ${PORT}`);
+});
