@@ -1,6 +1,8 @@
 version: '3.8'
 
 services:
+
+  # ── INFRASTRUCTURE ─────────────────────────────────────
   mysql:
     image: mysql:8.0
     container_name: egx_mysql
@@ -13,6 +15,11 @@ services:
     volumes:
       - ./services/data-store/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
       - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD:-egx_root_pass}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   timescale:
     image: timescale/timescaledb:latest-pg14
@@ -25,14 +32,28 @@ services:
     volumes:
       - ./services/data-store/timescale/init.sql:/docker-entrypoint-initdb.d/init.sql
       - timescale_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   redis:
     image: redis:alpine
     container_name: egx_redis
     restart: always
+    command: redis-server --appendonly yes
     ports:
       - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
+  # ── CORE SERVICES ──────────────────────────────────────
   core-brain:
     build:
       context: ./services/core-brain
@@ -43,9 +64,16 @@ services:
       - "3000:3000"
     environment:
       - REDIS_URL=redis://redis:6379
+      - MYSQL_URL=mysql://root:${MYSQL_ROOT_PASSWORD:-egx_root_pass}@mysql:3306/egxnexus
+      - ANALYSIS_ENGINE_URL=http://analysis-engine:3002
+      - PREDICTION_ENGINE_URL=http://prediction-engine:3003
+      - DATA_HARVESTER_URL=http://data-harvester:3005
       - PORT=3000
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
     volumes:
       - ./services/core-brain:/app
       - /app/node_modules
@@ -62,11 +90,124 @@ services:
       - REDIS_URL=redis://redis:6379
       - PORT=3001
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
     volumes:
       - ./services/auth-gateway:/app
       - /app/node_modules
 
+  analysis-engine:
+    build:
+      context: ./services/analysis-engine
+      target: development
+    container_name: egx_analysis_engine
+    restart: always
+    ports:
+      - "3002:3002"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MYSQL_URL=mysql://root:${MYSQL_ROOT_PASSWORD:-egx_root_pass}@mysql:3306/egxnexus
+      - PORT=3002
+    depends_on:
+      redis:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./services/analysis-engine:/app
+      - /app/node_modules
+
+  prediction-engine:
+    build:
+      context: ./services/prediction-engine
+      target: development
+    container_name: egx_prediction_engine
+    restart: always
+    ports:
+      - "3003:3003"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - BROKER_ID=thndr
+      - PROCESS_MODE=listener
+      - TV_USERNAME=${TV_USERNAME}
+      - TV_PASSWORD=${TV_PASSWORD}
+      - HEADLESS_MODE=true
+      - AUTH_REFRESH_HOURS=12
+      - PORT=3003
+    depends_on:
+      redis:
+        condition: service_healthy
+      timescale:
+        condition: service_healthy
+    volumes:
+      - ./services/prediction-engine:/app
+      - /app/node_modules
+
+  data-harvester:
+    build:
+      context: ./services/data-harvester
+    container_name: egx_data_harvester
+    restart: always
+    ports:
+      - "3005:3005"
+    environment:
+      - MYSQL_URL=mysql://root:${MYSQL_ROOT_PASSWORD:-egx_root_pass}@mysql:3306/egxnexus
+      - REDIS_URL=redis://redis:6379
+      - PORT=3005
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./services/data-harvester:/app
+      - /app/node_modules
+
+  notification-hub:
+    build:
+      context: ./services/notification-hub
+      target: development
+    container_name: egx_notification_hub
+    restart: always
+    ports:
+      - "3006:3006"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - PORT=3006
+    depends_on:
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./services/notification-hub:/app
+      - /app/node_modules
+
+  dashboard-api:
+    build:
+      context: ./services/dashboard-api
+      target: development
+    container_name: egx_dashboard_api
+    restart: always
+    ports:
+      - "3007:3007"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MYSQL_URL=mysql://root:${MYSQL_ROOT_PASSWORD:-egx_root_pass}@mysql:3306/egxnexus
+      - PORT=3007
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./services/dashboard-api:/app
+      - /app/node_modules
+
+  # ── GATEWAY ────────────────────────────────────────────
   nginx:
     image: nginx:alpine
     container_name: egx_nginx
@@ -77,7 +218,13 @@ services:
     depends_on:
       - core-brain
       - auth-gateway
+      - analysis-engine
+      - prediction-engine
+      - data-harvester
+      - notification-hub
+      - dashboard-api
 
 volumes:
   mysql_data:
   timescale_data:
+  redis_data:
