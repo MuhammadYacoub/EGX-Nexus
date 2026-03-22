@@ -129,10 +129,10 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - REDIS_DB=0
-      - BROKER_ID=thndr
+      - BROKER_ID=local_broker
       - PROCESS_MODE=listener
-      - TV_USERNAME=your_thndr_email
-      - TV_PASSWORD=your_thndr_password
+      - BROKER_USERNAME=${BROKER_USERNAME}
+      - BROKER_PASSWORD=${BROKER_PASSWORD}
       - HEADLESS_MODE=true
       - AUTH_REFRESH_HOURS=12
       - PORT=3003

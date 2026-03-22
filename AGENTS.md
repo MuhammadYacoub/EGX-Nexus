@@ -12,7 +12,7 @@ Welcome, AI Agent. This file serves as your core directive and master context wh
 ## Core Mission
 Build a fully autonomous AI-powered trading intelligence platform exclusively for the Egyptian Stock Exchange (EGX). The system must:
 - Operate locally with **no dependency on paid external APIs** (e.g., OpenAI, Anthropic).
-- Use strictly internal, natively trained Machine Learning models built from historical EGX data.
+- Use a **Hybrid AI Approach**, combining strictly internal, natively trained traditional Machine Learning (ML) classifiers with advanced Deep Learning (DL) models (like LSTMs and Transformers) built from historical EGX data.
 - Provide real-time analysis and autonomous BUY/SELL/HOLD decisions.
 - Democratize financial intelligence for Egyptian traders.
 
@@ -28,7 +28,8 @@ All services run in Docker containers orchestrated by `docker-compose.yml`.
 | `data-harvester` | 3005 | Yahoo Finance OHLCV collector, cron daily 7PM Cairo time | Node.js |
 | `notification-hub` | 3006 | Telegram alerts for signals and decisions | Node.js |
 | `dashboard-api` | 3007 | REST API for UI and dashboard | Node.js |
-| `training-pipeline`| N/A | Python ML model training natively on EGX data | Python |
+| `deep-learning-engine`| 3008 | Hybrid AI DL model serving (TensorFlow/PyTorch) | Python/FastAPI |
+| `training-pipeline`| N/A | Python ML/DL model training natively on EGX data | Python |
 | `ollama` | 11434 | Local LLM for NLP and Arabic news only | Ollama |
 
 ## Databases
@@ -44,14 +45,15 @@ All services run in Docker containers orchestrated by `docker-compose.yml`.
 ## The Multi-Agent Debate System (Phase 6 — Planned)
 This is the intelligence core of EGX-Nexus. Located inside: `services/core-brain/src/agents/`
 
-**CRITICAL DESIGN DECISION:** Do **NOT** use generic LLMs (OpenAI, Anthropic) for financial analysis. Use specialized ML models trained exclusively by our internal `training-pipeline`. Ollama is **only** for Arabic NLP and news sentiment.
+**CRITICAL DESIGN DECISION:** Do **NOT** use generic LLMs (OpenAI, Anthropic) for financial analysis. The system relies entirely on a **Hybrid AI Architecture**. Use specialized ML and DL models trained exclusively by our internal `training-pipeline`. Ollama is **only** for Arabic NLP and news sentiment.
 
-### Agent Roles:
-1. **bull-agent.js**: Uses natively trained ML model. Finds bullish signals, accumulation phases, demand zones.
-2. **bear-agent.js**: Uses natively trained ML model. Finds bearish signals, distribution phases, supply zones.
+### Agent Roles & Hybrid Components:
+1. **bull-agent.js**: Uses natively trained ML classifiers. Finds bullish signals, accumulation phases, demand zones.
+2. **bear-agent.js**: Uses natively trained ML classifiers. Finds bearish signals, distribution phases, supply zones.
 3. **technical-agent.js**: Deterministic rule engine (Wyckoff + Elliott Wave rules). Identifies market phase, wave count. **Does NOT use any LLM.**
 4. **sentiment-agent.js**: Uses Ollama `llama3` (local). Analyzes Arabic news, market sentiment, EGX announcements. **Only agent allowed to use Ollama.**
-5. **debate-manager.js**: Collects all agent outputs, runs weighted voting. Weights: specialized ML models 70%, Ollama sentiment 30%. Output: `{ action, confidence, reasoning, dissenting_view }`.
+5. **deep-learning-engine (Service)**: Feeds complex feature embeddings and non-linear probabilities (via Transformers/LSTMs) directly into the debate manager to anticipate shifting market patterns dynamically.
+6. **debate-manager.js**: Collects all agent outputs (ML classifiers, Technical, Sentiment) and probabilities from the `deep-learning-engine`. Runs a hybrid weighted voting matrix. Output: `{ action, confidence, reasoning, dissenting_view }`.
 6. **risk-manager.js**: Applies position sizing, drawdown limits, risk filters to the debate-manager output. Output: final executable signal.
 7. **decision-agent.js**: Formats final decision, publishes to Redis, triggers `notification-hub`.
 
@@ -62,11 +64,11 @@ This is the intelligence core of EGX-Nexus. Located inside: `services/core-brain
         ↓
 `core-brain` collects all data
         ↓
-`bull-agent` + `bear-agent` + `technical-agent` run in parallel
+`bull-agent` + `bear-agent` + `technical-agent` + `deep-learning-engine` run/poll in parallel
         ↓
 `sentiment-agent` runs (Ollama — Arabic news)
         ↓
-`debate-manager` resolves with weighted voting
+`debate-manager` resolves with hybrid weighted voting
         ↓
 `risk-manager` applies filters
         ↓
