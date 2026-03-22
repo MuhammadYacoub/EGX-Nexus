@@ -30,7 +30,15 @@
 ## Vision & Purpose
 **EGX-Nexus** is an independent, ground-up intelligence system designed to democratize financial intelligence for Egyptian retail traders. By operating entirely locally and natively understanding the Egyptian Stock Exchange (EGX), the platform ensures data privacy, independence from paid external APIs, and zero reliance on generic LLMs for financial calculations.
 
-The system combines real-time broker WebSocket streams, historical OHLCV analysis (via Yahoo Finance), and a unique **Multi-Agent AI Debate System** to produce actionable BUY/SELL/HOLD decisions. EGX-Nexus relies on strictly specialized Machine Learning models trained intrinsically on EGX data to power its autonomous trading decisions.
+The system combines real-time broker WebSocket streams, historical OHLCV analysis, and a unique **Multi-Agent AI Debate System** to produce actionable BUY/SELL/HOLD decisions.
+
+To achieve the highest decision accuracy, EGX-Nexus embraces a **Hybrid AI Approach**, seamlessly integrating traditional Machine Learning (ML) classifiers with advanced Deep Learning (DL) models. This hybrid system extracts sophisticated insights from complex, high-dimensional financial data to dynamically anticipate shifting market patterns in real-time.
+
+## Deep Learning Integration
+EGX-Nexus leverages state-of-the-art Deep Learning frameworks (like TensorFlow and PyTorch) to process massive datasets that traditional ML struggles with.
+- **Sequential Pattern Recognition:** LSTMs and Transformers analyze historical price and volume sequences to detect hidden market regimes.
+- **Dynamic Adaptation:** DL models dynamically re-adjust to changing market conditions and volatility clusters on the EGX.
+- **Hybrid Synergy:** The `deep-learning-engine` feeds complex feature embeddings and non-linear probabilities directly into the `core-brain` debate manager, allowing traditional ML agents and DL engines to collaborate on the final trading signal.
 
 ## Key Features
 - **Local-First & Autonomous**: No paid external LLMs (e.g., OpenAI, Anthropic). The system relies on its own natively trained ML models for price prediction and local models (via Ollama) exclusively for Arabic NLP and news sentiment.
@@ -53,6 +61,7 @@ All services run in isolated Docker containers orchestrated by `docker-compose.y
 | `data-harvester` | 3005 | Yahoo Finance OHLCV collector, cron daily at 7 PM Cairo time | Node.js |
 | `notification-hub` | 3006 | Telegram alerts for signals and decisions | Node.js |
 | `dashboard-api` | 3007 | REST API for UI and dashboard | Node.js |
+| `deep-learning-engine`| 3008 | GPU-accelerated DL model serving (TensorFlow/PyTorch) | Python/FastAPI |
 | `training-pipeline` | N/A | Python ML model training strictly on EGX historical data | Python |
 | `ollama` | 11434 | Local LLM inference (Planned for Phase 6 - Arabic NLP ONLY) | Ollama |
 
@@ -107,9 +116,17 @@ This project is intended for developers and technical traders looking to self-ho
 # 🇪🇬 التوثيق باللغة العربية
 
 ## الرؤية والهدف
-**EGX-Nexus** هو نظام ذكاء تداول مستقل تماماً، تم تصميمه بهدف جعل التحليل المالي الذكي في متناول المتداولين الأفراد في البورصة المصرية (EGX). من خلال العمل بشكل محلي (Local-First) والفهم العميق للبورصة المصرية، يضمن النظام خصوصية البيانات، الاستقلال التام عن واجهات برمجة التطبيقات (APIs) المدفوعة الخارجية، وعدم الاعتماد على نماذج اللغة الكبيرة (LLMs) العامة في الحسابات المالية.
+**EGX-Nexus** هو نظام ذكاء تداول مستقل تماماً، تم تصميمه بهدف جعل التحليل المالي الذكي في متناول المتداولين الأفراد في البورصة المصرية (EGX). من خلال العمل بشكل محلي (Local-First) والفهم العميق للبورصة المصرية، يضمن النظام خصوصية البيانات، الاستقلال التام عن واجهات برمجة التطبيقات (APIs) المدفوعة، وعدم الاعتماد على النماذج اللغوية (LLMs) العامة في الحسابات المالية.
 
-يجمع النظام بين بث أسعار الوسيط المالي اللحظي (عبر WebSockets)، وتحليل البيانات التاريخية (OHLCV) عبر Yahoo Finance، ونظام فريد **للنقاش بين وكلاء الذكاء الاصطناعي (Multi-Agent AI Debate System)** لإنتاج قرارات تداول قابلة للتنفيذ (شراء/بيع/احتفاظ). يعتمد EGX-Nexus بالكامل على نماذج تعلم آلي (ML) متخصصة تم تدريبها داخلياً على بيانات البورصة المصرية لتوجيه قرارات التداول المستقلة الخاصة به.
+يجمع النظام بين بث أسعار الوسيط المالي اللحظي، وتحليل البيانات التاريخية (OHLCV)، ونظام فريد **للنقاش بين وكلاء الذكاء الاصطناعي (Multi-Agent AI Debate System)** لإنتاج قرارات تداول حاسمة.
+
+لتحقيق أقصى درجات الدقة، يتبنى EGX-Nexus **نهجاً هجيناً (Hybrid AI Approach)** يدمج بسلاسة بين مصنفات التعلم الآلي التقليدي (ML) ونماذج التعلم العميق (Deep Learning) المتطورة. يعمل هذا النظام الهجين على استخلاص رؤى مالية معقدة من البيانات الضخمة عالية الأبعاد، مما يتيح له التنبؤ الديناميكي بأنماط السوق المتغيرة لحظة بلحظة.
+
+## تكامل التعلم العميق (Deep Learning Integration)
+يستفيد EGX-Nexus من أطر التعلم العميق الرائدة (مثل TensorFlow و PyTorch) لمعالجة مجموعات البيانات الضخمة التي يصعب على تقنيات ML التقليدية التعامل معها:
+- **التعرف على الأنماط المتسلسلة:** تستخدم نماذج LSTMs و Transformers لتحليل التسلسلات التاريخية للأسعار والأحجام للكشف عن أنظمة السوق الخفية.
+- **التكيف الديناميكي:** تتكيف نماذج DL ديناميكياً مع ظروف السوق المتغيرة وتكتلات التقلبات في البورصة المصرية.
+- **التعاون الهجين:** يوفر محرك التعلم العميق (`deep-learning-engine`) احتمالات غير خطية معقدة مباشرة إلى نظام النقاش في `core-brain`، مما يتيح لوكلاء ML التقليديين ومحركات DL التعاون لإنتاج إشارة التداول النهائية بأعلى موثوقية.
 
 ## المميزات الرئيسية
 - **محلي ومستقل**: لا يعتمد على واجهات ذكاء اصطناعي خارجية مدفوعة (مثل OpenAI أو Anthropic). يعتمد النظام على نماذج تعلم الآلة (ML) المتخصصة الخاصة به لتوقع الأسعار، ويستخدم نماذج محلية (عبر Ollama) حصرياً لمعالجة اللغات الطبيعية (NLP) للأخبار باللغة العربية.
@@ -132,7 +149,8 @@ This project is intended for developers and technical traders looking to self-ho
 | `data-harvester` | 3005 | جامع بيانات Yahoo Finance OHLCV، يعمل يومياً الساعة 7 مساءً بتوقيت القاهرة | Node.js |
 | `notification-hub` | 3006 | ناشر تنبيهات تيليجرام لإشارات التداول | Node.js |
 | `dashboard-api` | 3007 | واجهة برمجة تطبيقات (REST API) للوحة التحكم | Node.js |
-| `training-pipeline` | غير مطبق | مسار بايثون لتدريب نماذج (ML) داخلياً على بيانات البورصة المصرية فقط | Python |
+| `deep-learning-engine`| 3008 | تشغيل نماذج التعلم العميق (TensorFlow/PyTorch) مع دعم GPU | Python/FastAPI |
+| `training-pipeline` | غير مطبق | مسار بايثون لتدريب نماذج (ML/DL) داخلياً على بيانات البورصة المصرية فقط | Python |
 | `ollama` | 11434 | نموذج لغة كبير محلي (المرحلة 6 - لمعالجة الأخبار العربية فقط) | Ollama |
 
 *ملاحظة: يعمل EGX-Nexus خلف خادم Nginx داخلي على المنفذ `8080` (وليس `80`) لتجنب التعارض مع الخوادم المشتركة.*

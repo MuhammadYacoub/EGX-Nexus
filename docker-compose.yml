@@ -66,6 +66,7 @@ services:
       - ANALYSIS_ENGINE_URL=http://analysis-engine:3002
       - PREDICTION_ENGINE_URL=http://prediction-engine:3003
       - DATA_HARVESTER_URL=http://data-harvester:3005
+      - DEEP_LEARNING_ENGINE_URL=http://deep-learning-engine:3008
       - PORT=3000
     depends_on:
       redis:
@@ -205,6 +206,35 @@ services:
       - ./services/dashboard-api:/app
       - /app/node_modules
 
+  deep-learning-engine:
+    build:
+      context: ./services/deep-learning-engine
+    container_name: egx_deep_learning_engine
+    restart: always
+    ports:
+      - "${DL_ENGINE_PORT:-3008}:${DL_ENGINE_PORT:-3008}"
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - MYSQL_URL=mysql://root:egx_root_pass@mysql:3306/egxnexus
+      - PORT=${DL_ENGINE_PORT:-3008}
+      - USE_GPU=${USE_GPU:-false}
+      - DL_FRAMEWORK=${DL_FRAMEWORK:-pytorch}
+    depends_on:
+      redis:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./services/deep-learning-engine:/app
+    # Uncomment deploy block below if running on a GPU-enabled Docker host to enable CUDA
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
   nginx:
     image: nginx:alpine
     container_name: egx_nginx
@@ -220,6 +250,7 @@ services:
       - data-harvester
       - notification-hub
       - dashboard-api
+      - deep-learning-engine
 
 volumes:
   mysql_

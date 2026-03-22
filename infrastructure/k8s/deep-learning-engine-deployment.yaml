@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: egx-deep-learning-engine
+  labels:
+    app: egx-deep-learning-engine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: egx-deep-learning-engine
+  template:
+    metadata:
+      labels:
+        app: egx-deep-learning-engine
+    spec:
+      containers:
+      - name: deep-learning-engine
+        image: egx-nexus-deep-learning-engine:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3008
+        env:
+        - name: USE_GPU
+          value: "true"
+        - name: DL_FRAMEWORK
+          value: "pytorch"
+        # The below configuration assumes a Kubernetes cluster with NVIDIA GPU support configured.
+        # resources:
+        #   limits:
+        #     nvidia.com/gpu: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deep-learning-engine-service
+spec:
+  selector:
+    app: egx-deep-learning-engine
+  ports:
+    - protocol: TCP
+      port: 3008
+      targetPort: 3008
+  type: ClusterIP
