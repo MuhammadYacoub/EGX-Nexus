@@ -12,7 +12,7 @@ The `core-brain` acts as the central hub of the EGX-Nexus. It coordinates the ex
 ## Agent System Guidelines (`src/agents/`)
 This service houses the core intelligence of EGX-Nexus.
 **CRITICAL:** Do not use OpenAI/Anthropic APIs here.
-- `bull-agent.js` / `bear-agent.js`: Use Chaimera specialized ML models.
+- `bull-agent.js` / `bear-agent.js`: Use natively trained specialized ML models.
 - `technical-agent.js`: Pure deterministic logic (Wyckoff, Elliott). No LLM.
 - `sentiment-agent.js`: Uses local Ollama (`llama3`) for Arabic news ONLY.
 - `debate-manager.js`: Weighted voting (70% ML models, 30% sentiment).

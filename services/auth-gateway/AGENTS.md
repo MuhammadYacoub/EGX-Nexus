@@ -1,8 +1,8 @@
 # `auth-gateway` Microservice
 
 ## Role & Responsibility
-**Session Management + TradingView Auth**
-The `auth-gateway` provides session security, manages authentication, and specifically handles external API keys or TradingView WebSocket credentials via Thndr.
+**Session Management + Broker API Auth**
+The `auth-gateway` provides session security, manages authentication, and handles external broker API keys or WebSocket credentials for real-time data streaming.
 
 ## Technical Specifications
 - **Stack:** Node.js (Express, Redis for session cache)
