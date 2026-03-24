@@ -176,12 +176,23 @@ function buildAckGroups<T extends { streamKey: string; messageId: string }>(batc
 }
 
 async function ackCommittedBatch(client: Redis, ackByStream: Map<string, string[]>, batchSize: number, kind: 'ticks' | 'depth') {
-    let acked = 0;
+    const pipeline = client.pipeline();
     for (const [streamKey, ids] of ackByStream) {
         for (let i = 0; i < ids.length; i += XACK_CHUNK_SIZE) {
             const chunk = ids.slice(i, i + XACK_CHUNK_SIZE);
-            const ackCount = await client.xack(streamKey, CONSUMER_GROUP, ...chunk);
-            acked += Number(ackCount);
+            pipeline.xack(streamKey, CONSUMER_GROUP, ...chunk);
+        }
+    }
+
+    const results = await pipeline.exec();
+    let acked = 0;
+    if (results) {
+        for (const [err, count] of results) {
+            if (err) {
+                log.error({ error: err.message, kind }, 'Error in XACK pipeline');
+            } else {
+                acked += Number(count);
+            }
         }
     }
 
