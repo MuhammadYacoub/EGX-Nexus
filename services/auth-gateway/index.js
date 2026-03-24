@@ -11,6 +11,12 @@ app.get('/health', (_, res) => res.json({ service: 'auth-gateway', status: 'ok' 
 
 app.post('/session/login', async (req, res) => {
   const { platform } = req.body;
+
+  const allowedPlatforms = ['mubasher', 'thndr'];
+  if (!allowedPlatforms.includes(platform)) {
+    return res.status(400).json({ error: 'Invalid platform.' });
+  }
+
   try {
     const { default: handler } = await import(`./platforms/${platform}.js`);
     const session = await handler.login();
