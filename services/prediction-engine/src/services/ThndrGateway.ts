@@ -1,5 +1,5 @@
 
-import { chromium, Browser, Page, CDPSession, BrowserContext } from 'playwright';
+import { chromium, Page, CDPSession, BrowserContext } from 'playwright';
 import * as fs from 'fs';
 import * as path from 'path';
 import { disconnectRedis } from '../redis/RedisClient';
@@ -15,7 +15,6 @@ declare const window: any;
 declare const localStorage: any;
 
 export class ThndrGateway {
-    private browser: Browser | null = null;
     private context: BrowserContext | null = null;
     private page: Page | null = null;
     private cdp: CDPSession | null = null;
@@ -318,7 +317,7 @@ export class ThndrGateway {
     public async shutdown(): Promise<void> {
         this.isRunning = false;
         if (this.watchdogInterval) clearInterval(this.watchdogInterval);
-        if (this.browser) await this.browser.close();
+        if (this.context) await this.context.close();
         await disconnectRedis();
         log.info('🛑 Thndr Gateway stopped');
     }
