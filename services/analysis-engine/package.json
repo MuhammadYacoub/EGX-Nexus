@@ -8,7 +8,8 @@
     "dev": "node --watch index.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "redis": "^4.6.10"
+    "express": "^4.22.1",
+    "redis": "^4.7.1",
+    "technicalindicators": "^3.1.0"
   }
 }
