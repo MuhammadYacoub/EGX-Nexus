@@ -61,6 +61,7 @@ export class ThndrGateway {
 
             // Critical Fix: Attach CDP *BEFORE* navigating to capture initial snapshot
             await this.setupCDP();
+            log.info('🛡️ CDP attached, proceeding to navigation...');
 
             await this.navigate();
             this.startWatchdog();
@@ -97,6 +98,7 @@ export class ThndrGateway {
         });
 
         this.page = await this.context.newPage();
+        this.browser = this.context.browser();
 
         // 🟢 Mock Visibility API to force "Always Visible"
         await this.page.addInitScript(() => {
