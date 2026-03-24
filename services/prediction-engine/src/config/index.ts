@@ -44,12 +44,15 @@ function envBool(key: string, fallback: boolean): boolean {
 // Configuration Interface
 // ---------------------------------------------------------------------------
 
+const VALID_MODES = ['listener', 'auth', 'thndr', 'writer', 'alerts', 'portfolio'] as const;
+type ProcessMode = (typeof VALID_MODES)[number];
+
 export interface AppConfig {
     /** Target broker identifier — used as namespace in all Redis keys */
     readonly brokerId: string;
 
-    /** Which process mode to boot: 'listener' | 'auth' | 'thndr' | 'writer' | 'alerts' | 'portfolio' */
-    readonly processMode: 'listener' | 'auth' | 'thndr' | 'writer' | 'alerts' | 'portfolio';
+    /** Which process mode to boot */
+    readonly processMode: ProcessMode;
 
     readonly redis: {
         readonly host: string;
@@ -96,19 +99,24 @@ export interface AppConfig {
     };
 }
 
+const VALID_LOG_FORMATS = ['json', 'pretty'] as const;
+type LogFormat = (typeof VALID_LOG_FORMATS)[number];
+
 // ---------------------------------------------------------------------------
 // Build & Export Config
 // ---------------------------------------------------------------------------
 
-const VALID_MODES = ['listener', 'auth', 'thndr', 'writer', 'alerts', 'portfolio'];
-const processMode = envStr('PROCESS_MODE', 'listener');
-if (!VALID_MODES.includes(processMode)) {
-    throw new Error(`[Config] PROCESS_MODE must be one of [${VALID_MODES.join(', ')}], got: "${processMode}"`);
+const processModeRaw = envStr('PROCESS_MODE', 'listener');
+if (!(VALID_MODES as readonly string[]).includes(processModeRaw)) {
+    throw new Error(
+        `[Config] PROCESS_MODE must be one of [${VALID_MODES.join(', ')}], got: "${processModeRaw}"`
+    );
 }
+const processMode = processModeRaw as ProcessMode;
 
 export const config: AppConfig = Object.freeze({
     brokerId: envStr('BROKER_ID', 'default'),
-    processMode: processMode as any,
+    processMode,
 
     redis: Object.freeze({
         host: envStr('REDIS_HOST', '127.0.0.1'),
@@ -140,6 +148,8 @@ export const config: AppConfig = Object.freeze({
 
     log: Object.freeze({
         level: envStr('LOG_LEVEL', 'info'),
-        format: envStr('LOG_FORMAT', 'pretty') as 'json' | 'pretty',
+        format: (VALID_LOG_FORMATS as readonly string[]).includes(envStr('LOG_FORMAT', 'pretty'))
+            ? (envStr('LOG_FORMAT', 'pretty') as LogFormat)
+            : 'pretty',
     }),
 });
