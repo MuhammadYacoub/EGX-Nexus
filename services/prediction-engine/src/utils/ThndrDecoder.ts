@@ -33,6 +33,36 @@ interface FirebaseFrame {
     };
 }
 
+/**
+ * Represents the internal state for a single asset,
+ * capturing all known fields from Thndr/Firebase updates.
+ */
+interface ThndrAssetState {
+    symbol?: string;
+    S?: string;
+    ticker?: string;
+    market?: string;
+    last_trade_price?: number | string;
+    lp?: number | string;
+    bid_price?: number | string;
+    bp?: number | string;
+    ask_price?: number | string;
+    ap?: number | string;
+    bid_volume?: number | string;
+    bv?: number | string;
+    ask_volume?: number | string;
+    av?: number | string;
+    v?: number | string;
+    vol?: number | string;
+    tv?: number | string;
+    trade_volume?: number | string;
+    change?: number | string;
+    ch?: number | string;
+    change_percent?: number | string;
+    cp?: number | string;
+    [key: string]: any;
+}
+
 export class ThndrDecoder {
     /**
      * Maps the proprietary hash ID to the canonical symbol.
@@ -45,7 +75,7 @@ export class ThndrDecoder {
      * This allows us to merge delta updates (leaf nodes or partial objects)
      * into a complete state.
      */
-    private assetState = new Map<string, any>();
+    private assetState = new Map<string, ThndrAssetState>();
 
     constructor() { }
 
@@ -96,12 +126,11 @@ export class ThndrDecoder {
     /**
      * Processes the initial snapshot to build the AssetID → Symbol map.
      */
-    private handleSnapshot(data: any): void {
+    private handleSnapshot(data: Record<string, ThndrAssetState>): void {
         if (!data || typeof data !== 'object') return;
 
         let count = 0;
-        for (const [assetId, info] of Object.entries(data)) {
-            const val = info as any;
+        for (const [assetId, val] of Object.entries(data)) {
             if (!val || typeof val !== 'object') continue;
 
             // Update symbol map
