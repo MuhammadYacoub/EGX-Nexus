@@ -59,8 +59,6 @@ export class ThndrGateway {
         try {
             await this.initBrowser();
 
-            // Critical Fix: Attach CDP *BEFORE* navigating to capture initial snapshot
-            await this.setupCDP();
             log.info('🛡️ CDP attached, proceeding to navigation...');
 
             await this.navigate();
@@ -97,8 +95,11 @@ export class ThndrGateway {
             ]
         });
 
-        this.page = await this.context.newPage();
+        this.page = this.context.pages()[0] || await this.context.newPage();
         this.browser = this.context.browser();
+
+        // Critical Fix: Attach CDP *BEFORE* any initialization to capture everything
+        await this.setupCDP();
 
         // 🟢 Mock Visibility API to force "Always Visible"
         await this.page.addInitScript(() => {
@@ -146,8 +147,6 @@ export class ThndrGateway {
         log.info('🔌 Connecting to CDP (Chrome DevTools Protocol)...');
         this.cdp = await this.context!.newCDPSession(this.page);
 
-        await this.cdp.send('Network.enable');
-
         this.cdp.on('Network.webSocketFrameReceived', (params: any) => {
             this.handleWebSocketFrame(params);
         });
@@ -167,6 +166,8 @@ export class ThndrGateway {
                 }
             }
         });
+
+        await this.cdp.send('Network.enable');
 
         log.info('✅ CDP Interceptor attached & ready');
     }
@@ -320,6 +321,7 @@ export class ThndrGateway {
     public async shutdown(): Promise<void> {
         this.isRunning = false;
         if (this.watchdogInterval) clearInterval(this.watchdogInterval);
+        if (this.context) await this.context.close();
         if (this.browser) await this.browser.close();
         await disconnectRedis();
         log.info('🛑 Thndr Gateway stopped');
