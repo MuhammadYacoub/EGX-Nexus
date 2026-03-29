@@ -16,13 +16,21 @@ async function fetchHistory(symbol, period = '6mo') {
   const ticker = `${symbol}.CA`;
   const result = await yahooFinance.historical(ticker, { period1: new Date(Date.now() - 180*86400*1000) });
   if (!result?.length) return 0;
-  for (const row of result) {
-    await db.execute(
-      `INSERT IGNORE INTO stock_prices (symbol, date, open, high, low, close, volume)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [symbol, row.date.toISOString().slice(0,10), row.open, row.high, row.low, row.close, row.volume]
-    );
-  }
+  const values = result.map(row => [
+    symbol,
+    row.date.toISOString().slice(0, 10),
+    row.open,
+    row.high,
+    row.low,
+    row.close,
+    row.volume
+  ]);
+
+  await db.query(
+    `INSERT IGNORE INTO stock_prices (symbol, date, open, high, low, close, volume)
+     VALUES ?`,
+    [values]
+  );
   await redis.set(`last_harvest:${symbol}`, Date.now(), { EX: 86400 });
   return result.length;
 }
